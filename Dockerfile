@@ -1,5 +1,7 @@
 FROM alekzonder/puppeteer
 
+USER root
+
 RUN apt-get update && apt-get install -y unzip fontconfig
 RUN mkdir /noto
 ADD https://noto-website.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip /noto
