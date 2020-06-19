@@ -20,6 +20,7 @@ RUN unzip NotoSansCJKjp-hinted.zip && \
     /usr/bin/fc-cache -fv
 RUN rm -rf /noto
 RUN npm install -g puppeteer@4.0.0 --unsafe-perm=tru
+ENV NODE_PATH="/usr/local/lib/node_modules/"
 
 WORKDIR /app
 
