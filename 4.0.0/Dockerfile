@@ -18,9 +18,9 @@ RUN unzip NotoSansCJKjp-hinted.zip && \
     cp *.otf /usr/share/fonts/noto && \
     chmod 644 -R /usr/share/fonts/noto/ && \
     /usr/bin/fc-cache -fv
-WORKDIR /app
 RUN rm -rf /noto
+RUN npm install -g puppeteer@4.0.0 --unsafe-perm=tru
 
-RUN PUPPETEER_SKIP_DOWNLOAD=true npm i -g puppeteer@4.0.0
+WORKDIR /app
 
 CMD ["node", "index.js"]
